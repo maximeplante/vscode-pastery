@@ -2,6 +2,9 @@
     "name": "vscode-pastery",
     "displayName": "Pastery for VSCode",
     "description": "Upload to Pastery in a single keystroke",
+    "repository": {
+        "url": "https://github.com/maximeplante/vscode-pastery"
+    },
     "version": "0.0.1",
     "publisher": "maximeplante",
     "engines": {
