@@ -1,7 +1,7 @@
 {
     "name": "vscode-pastery",
     "displayName": "Pastery for VSCode",
-    "description": "Upload to Pastery in a single keystroke",
+    "description": "VSCode support for Pastery, the sweetest pastebin in the world",
     "repository": {
         "url": "https://github.com/maximeplante/vscode-pastery"
     },
@@ -10,6 +10,12 @@
     "engines": {
         "vscode": "^1.22.0"
     },
+    "keywords": [
+        "pastery",
+        "pastebin",
+        "share",
+        "upload"
+    ],
     "categories": [
         "Other"
     ],
