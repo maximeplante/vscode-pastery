@@ -2,6 +2,8 @@
 
 Upload to [pastery.net](https://www.pastery.net/) directly from VSCode.
 
+![Animated demonstration](demo.gif)
+
 ## Usage
 * Open a file.
 * Make a selection (optional).
