@@ -56,7 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
             .catch((error:string) =>
                 vscode.window.showErrorMessage("An error occurred when accessing the clipboard: " + error));
         }, error => {
-            vscode.window.showErrorMessage(error);
+            vscode.window.showErrorMessage(error.message || error);
         });
     });
 

@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - When entering an empty title in the prompt, the paste will be named "Untitled" instead of throwing an error
 ### Fixed
 - An error was thrown when creating a paste with the "Never" expiration.
+- Some error messages were not showing and the extension would fail silently
 
 ## [0.0.1] - 2018-04-19
 ### Added
