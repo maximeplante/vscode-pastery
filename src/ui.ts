@@ -44,9 +44,9 @@ export function promptTitle(defaultTitle: string) {
         prompt: "Paste title",
         value: defaultTitle,
     }).then(title => {
-        if (!title) {
+        if (title === undefined) {
             throw new Error("Cancelled on title choice.");
         }
-        return title || "";
+        return title || "Untitled";
     });
 }

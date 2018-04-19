@@ -4,6 +4,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 ## [0.0.2]
+### Changed
+- When entering an empty title in the prompt, the paste will be named "Untitled" instead of throwing an error
 ### Fixed
 - An error was thrown when creating a paste with the "Never" expiration.
 
