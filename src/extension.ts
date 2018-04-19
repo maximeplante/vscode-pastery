@@ -25,18 +25,14 @@ export function activate(context: vscode.ExtensionContext) {
 
         let filename = editor.document.fileName;
 
-        var config = vscode.workspace.getConfiguration('vscode-pastery');
-
         let p:Thenable<void> = Promise.resolve();
 
         // Ask for the api key if not defined
+        let config = vscode.workspace.getConfiguration('vscode-pastery');
         if(config.get("api-key") === undefined || config.get("api-key") === "") {
             p = ui.promptApiKey()
             .then(key => config.update("api-key", key, vscode.ConfigurationTarget.Global));
         }
-
-        // We know at this point that an api-key is defined thanks to the prompt
-        let apiKey = config.get("api-key") as string;
 
         // Prompt the paste expiration delay
         p.then(() => ui.promptExpDelay())
@@ -48,7 +44,16 @@ export function activate(context: vscode.ExtensionContext) {
                 return {minutes: minutes, title: title};
             })
         )
-        .then(userInputs => pastery.upload(apiKey, userInputs.minutes, userInputs.title, content))
+        // Upload to Pastery
+        .then(userInputs => {
+            // Get the updated config (might have been changed in the user
+            // was prompted to input his api-key)
+            let config = vscode.workspace.getConfiguration('vscode-pastery');
+            // We know at this point that an api-key is defined thanks to the prompt
+            let apiKey = config.get("api-key") as string;
+            return pastery.upload(apiKey, userInputs.minutes, userInputs.title, content)
+        })
+        // Send link to clipboard
         .then((url) => {
             clipboardy.write(url)
             .then(() =>
