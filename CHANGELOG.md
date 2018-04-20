@@ -2,8 +2,7 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## [Unreleased]
-## [0.0.2]
+## [0.0.2] - 2018-04-20
 ### Changed
 - When entering an empty title in the prompt, the paste will be named "Untitled" instead of throwing an error
 ### Fixed
