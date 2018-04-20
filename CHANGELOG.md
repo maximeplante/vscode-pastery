@@ -2,6 +2,11 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## [Unreleased]
+## [0.0.3]
+### Changed
+- Improved error message when the Pastery API returns an error.
+
 ## [0.0.2] - 2018-04-20
 ### Changed
 - When entering an empty title in the prompt, the paste will be named "Untitled" instead of throwing an error

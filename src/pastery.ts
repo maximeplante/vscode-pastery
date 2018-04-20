@@ -23,7 +23,12 @@ export function upload(apiKey:string, duration:number, title:string, content:str
     var p = new Promise<string>((resolve, reject) => {
         axios.post("https://www.pastery.net/api/paste/?" + query, content)
         .then(response => resolve(response.data.url))
-        .catch(error => reject(error));
+        .catch(error => {
+            if (error.response) {
+                return reject("Pastery API returned an error. Please check if your Pastery API key is correct (it can be found in the VSCode global settings).");
+            }
+            return reject(error);
+        });
     });
 
     return p;
