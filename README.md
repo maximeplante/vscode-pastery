@@ -1,4 +1,4 @@
-# VSCode Pastery 🍰
+# Pastery for VSCode 🍰
 
 Upload to [pastery.net](https://www.pastery.net/) directly from VSCode.
 
