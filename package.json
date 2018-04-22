@@ -5,7 +5,8 @@
     "repository": {
         "url": "https://github.com/maximeplante/vscode-pastery"
     },
-    "version": "0.0.2",
+    "icon": "icon.png",
+    "version": "0.0.3",
     "publisher": "maximeplante",
     "engines": {
         "vscode": "^1.22.0"
