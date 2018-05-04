@@ -1,6 +1,10 @@
 # Change Log
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+
+## [0.0.4] - 2018-05-03
+### Fixed
+- Fixed #2 by setting the **Never** expiration to 50 years.
 
 ## [0.0.3] - 2018-04-21
 ### Added
