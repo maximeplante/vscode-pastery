@@ -22,7 +22,7 @@ export function promptExpDelay() {
         {name: "1 Week", minutes: 10080},
         {name: "2 Weeks", minutes: 20160},
         {name: "1 Month", minutes: 43800},
-        {name: "Never", minutes: 0}
+        {name: "Never", minutes: 26280000}
     ];
 
     return vscode.window.showQuickPick(expirations.map((e) => e.name), {
